@@ -5,6 +5,8 @@ red='\033[0;31m'
 green='\033[0;32m'
 blue='\033[0;34m'
 
+# Create + Verify symlinks
+
 dotfiles=$(find . -type f -name ".*" -o -name "*.conf" | sort) 
 for dotfile in $dotfiles; do
 	correct_path="${dotfile##./}"
