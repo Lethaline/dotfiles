@@ -1,0 +1,7 @@
+# Check if a command exist
+
+type foobar &> /dev/null
+hash foobar &> /dev/null
+command -v foobar &> /dev/null
+which foobar &> /dev/null
+(( $+commands[foobar] )) (zsh only)
