@@ -17,6 +17,16 @@ for dotfile in $dotfiles; do
 			echo "[ ${red}KO${nocolor} ] : an error occured for $correct_path"
 		fi
 	else
+		if [ ! $(readlink -f $HOME/$correct_path) = "$PWD/$correct_path" ]; then
+			echo "Bad symlink for $HOME/$correct_path"
+			rm "$HOME/$correct_path"
+			echo "Correction..."
+			if ln -s "$PWD/$correct_path" "$HOME/$correct_path"; then
+				echo "[ ${green}OK${nocolor} ] : new symlink for $correct_path"
+			else
+				echo "[ ${red}KO${nocolor} ] : an error occured for $correct_path"
+			fi
+		fi
 		echo "[ ${blue}AOK${nocolor} ] : $correct_path already linked"
 	fi
 done
