@@ -16,7 +16,7 @@ link_dotfiles()
 	fi
 }
 
-dotfiles=$(find . -type f -name ".*" -o -name "*.conf" | sort)
+dotfiles=$(find . -type f -name ".*" ! -name ".DS_Store" ! -name "*.swp" -o -name "*.conf" | sort)
 for dotfile in $dotfiles; do
 	correct_path="${dotfile##./}"
 	if [ -e "$HOME/$correct_path" ]; then
