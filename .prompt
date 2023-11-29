@@ -1,1 +1,4 @@
+# My own prompt
+
+PROMPT='[%?] %F{red}%*%f %F{green}%1d%f%F{blue}${vcs_info_msg_0_}%f > '
 

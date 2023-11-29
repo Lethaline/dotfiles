@@ -13,3 +13,4 @@ alias ....="cd ../../.."
 
 alias c="clear"
 alias cleanup="find . -type f -name '*DS_Store' -ls -delete"
+alias sa="source $HOME/.zshrc"
