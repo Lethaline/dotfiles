@@ -1,3 +1,6 @@
+# Adding SFML or Vulkan
+# Try to add codium command to terminal automaticly
+
 # Colors
 
 nocolor='\033[0m'
