@@ -10,7 +10,20 @@ alias l='ls -CF'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias dev="cd $HOME/Develop"
 
 alias c="clear"
 alias cleanup="find . -type f -name '*DS_Store' -ls -delete"
 alias sa="source $HOME/.zshrc"
+
+# Git
+
+alias gita="git add"
+alias gitcom="git commit"
+alias gitp="git push"
+alias gits="git status"
+alias gitb="git branch"
+alias gitc="git checkout"
+alias gitm="git merge --no-ff"
+alias gitt="git tag -a"
+alias gitrst="git pull"
